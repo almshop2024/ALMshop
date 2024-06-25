@@ -10,112 +10,117 @@
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-<!-- Css Styles -->
-<link rel="stylesheet" href="../ALMshop-main/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="../ALMshop-main/css/elegant-icons.css" type="text/css">
-<link rel="stylesheet" href="../ALMshop-main/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="../ALMshop-main/css/jquery-ui.min.css" type="text/css">
-<link rel="stylesheet" href="../ALMshop-main/css/magnific-popup.css" type="text/css">
-<link rel="stylesheet" href="../ALMshop-main/css/owl.carousel.min.css" type="text/css">
-<link rel="stylesheet" href="../ALMshop-main/css/slicknav.min.css" type="text/css">
-<link rel="stylesheet" href="../ALMshop-main/css/style.css" type="text/css">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 
-<script>
-   
+    <script>
+       
 
-    function toggleCustomization(show) {
-        document.getElementById('customization-fields').style.display = show ? 'block' : 'none';
-        updatePrice(show);
+        function toggleCustomization(show) {
+            document.getElementById('customization-fields').style.display = show ? 'block' : 'none';
+            updatePrice(show);
+        }
+
+        function updatePrice(addCustomization, addBadge) {
+            const basePrice = 25.99;
+            const customizationCost = addCustomization ? 5.00 : 0.00;
+            const badgeCost = addBadge ? 3.00 : 0.00;
+            const totalPrice = basePrice + customizationCost + badgeCost;
+            document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '€';
+        }
+
+        function toggleBadge(show) {
+    document.getElementById('customization-badge').style.display = show ? 'block' : 'none';
+    if (!show) {
+        document.getElementById('badge-text').value = ''; // Limpa o campo se o distintivo não estiver visível
     }
-
-    function updatePrice(addCustomization, addBadge) {
-        const basePrice = 19.99
-        const customizationCost = addCustomization ? 5.00 : 0.00;
-        const badgeCost = addBadge ? 3.00 : 0.00;
-        const totalPrice = basePrice + customizationCost + badgeCost;
-        document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '€';
-    }
-
-    function toggleBadge(show) {
-document.getElementById('customization-badge').style.display = show ? 'block' : 'none';
-if (!show) {
-    document.getElementById('badge-text').value = ''; // Limpa o campo se o distintivo não estiver visível
 }
-}
+
+
 
 function toggleBadge(show) {
-document.getElementById('customization-badge').style.display = show ? 'block' : 'none';
-updatePrice(document.getElementById('Personalização-yes').checked, show);
-if (!show) {
-document.getElementById('badge-text').value = ''; // Limpa o campo se o distintivo não estiver visível
-}
+    document.getElementById('customization-badge').style.display = show ? 'block' : 'none';
+    updatePrice(document.getElementById('Personalização-yes').checked, show);
+    if (!show) {
+        document.getElementById('badge-text').value = ''; // Limpa o campo se o distintivo não estiver visível
+    }
 }
 
 function updatePrice(addCustomization, addBadge) {
-const basePrice = 19.99;
-const customizationCost = addCustomization ? 5.00 : 0.00;
-const badgeCost = addBadge ? 3.00 : 0.00;
-const totalPrice = basePrice + customizationCost + badgeCost;
-document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '€';
+    const basePrice = 25.99;
+    const customizationCost = addCustomization ? 5.00 : 0.00;
+    const badgeCost = addBadge ? 3.00 : 0.00;
+    const totalPrice = basePrice + customizationCost + badgeCost;
+    document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '€';
 }
 
-</script>
+
+
+    </script>
 </head>
+
 <body>
     <!-- Page Preloader -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-<!-- Offcanvas Menu Begin -->
-<div class="offcanvas-menu-overlay"></div>
-<div class="offcanvas-menu-wrapper">
-    <div class="offcanvas__close">+</div>
-   
-    <div class="offcanvas__logo">
-        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+       
+        <div class="offcanvas__logo">
+            <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+       
     </div>
-    <div id="mobile-menu-wrap"></div>
-   
-</div>
-<!-- Offcanvas Menu End -->
+    <!-- Offcanvas Menu End -->
 
-<header class="header">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-3 col-lg-2">
-                <div class="header__logo">
-                    <a href="../ALMshop-main/index.html"><img src="../ALMshop-main/img/logo.png" alt=""></a>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../Premierleague.html">Premier League</a></li>
+                            <li><a href="../Bundesliga.html">Bundesliga</a></li>
+                            <li><a href="../Ligabetclic.html">Liga Betclic</a></li>
+                            <li><a href="../Laliga.html">Laliga</a></li>
+                            <li class="active"><a href="../Seleções.html">Seleções</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-2">
+                    <nav class="header__menu">
+                        <ul>
+                        <li><a href="../Retro.html">RETRO</a></li>
+                    </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-7">
-                <nav class="header__menu">
-                    <ul>
-                        <li><a href="../ALMshop-main/index.html">Home</a></li>
-                        <li><a href="../Premier League/Premierleague.html">Premier League</a></li>
-                        <li><a href="../BundesLiga/Bundesliga.html ">Bundesliga</a></li>
-                        <li><a href="../Liga Betclic/Ligabetclic.html">Liga Betclic</a></li>
-                        <li><a href="../LaLiga/Laliga.html">Laliga</a></li>
-                        <li class="active"><a href="../Seleções/Seleções.html">Seleções</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-xl-2">
-                <nav class="header__menu">
-                    <ul>
-                        <li class="active"><a href="../retro/Retro.html">RETRO</a></li>
-                </ul>
-                </nav>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
             </div>
         </div>
-        <div class="canvas__open">
-            <i class="fa fa-bars"></i>
-        </div>
-    </div>
-</header>
+    </header>
 <!-- Header Section End -->
 
 <!-- Breadcrumb Begin -->
@@ -124,7 +129,7 @@ document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__links">
-                    <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                    <a href="../index.html"><i class="fa fa-home"></i> Home</a>
                     <span>Camisola seleção Portuguesa (Away)</span>
                 </div>
             </div>
@@ -141,22 +146,22 @@ document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '
                 <div class="product__details__pic">
                     <div class="product__details__pic__left product__thumb nice-scroll">
                         <a class="pt active" href="#product-1">
-                            <img src="img/shop/portugalaz.jpeg" alt="">
+                            <img src="../img/shop/portugalaz.jpeg" alt="">
                         </a>
                         <a class="pt" href="#product-2">
-                            <img src="img/shop/portugalaz2.jpeg" alt="">
+                            <img src="../img/shop/portugalaz2.jpeg" alt="">
                         </a>
                         <a class="pt" href="#product-3">
-                            <img src="img/shop/portugalaz3.jpeg" alt="">
+                            <img src="../img/shop/portugalaz3.jpeg" alt="">
                         </a>
                     </div>
                     <div class="product__details__slider__content">
                         <div class="product__details__pic__slider owl-carousel">
-                            <img data-hash="product-1" class="product__big__img" src="img/shop/portugalaz.jpeg"
+                            <img data-hash="product-1" class="product__big__img" src="../img/shop/portugalaz.jpeg"
                                 alt="">
-                            <img data-hash="product-2" class="product__big__img" src="img/shop/portugalaz2.jpeg"
+                            <img data-hash="product-2" class="product__big__img" src="../img/shop/portugalaz2.jpeg"
                                 alt="">
-                            <img data-hash="product-3" class="product__big__img" src="img/shop/portugalaz3.jpeg"
+                            <img data-hash="product-3" class="product__big__img" src="../img/shop/portugalaz3.jpeg"
                                 alt="">
 
                         </div>
@@ -257,7 +262,7 @@ document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '
                         <h5><span>Garantia de Envio Seguro 100%</span></h5>
                         <br>
                         <p>(Preço sem portes)<p>
-                        <img src="img/shop-details/details-payment.png" alt="">
+                        <img src="../img/shop-details/details-payment.png" alt="">
                     </div>
                 </div>
             </div>
@@ -312,7 +317,7 @@ document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about text-center">
                     <div class="footer__logo">
-                        <a href="#"><img src="img/logo.png" alt=""></a>
+                        <a href="../index.html"><img src="../img/logo.png" alt=""></a>
                     </div>
                     <p>Mais do que camisolas, são emoções.</p>
                 </div>
@@ -351,15 +356,15 @@ document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '
 <!-- Search End -->
 
 <!-- Js Plugins -->
-<script src="../ALMshop-main/js/jquery-3.3.1.min.js"></script>
-<script src="../ALMshop-main/js/bootstrap.min.js"></script>
-<script src="../ALMshop-main/js/jquery.magnific-popup.min.js"></script>
-<script src="../ALMshop-main/js/jquery-ui.min.js"></script>
-<script src="../ALMshop-main/js/mixitup.min.js"></script>
-<script src="../ALMshop-main/js/jquery.countdown.min.js"></script>
-<script src="../ALMshop-main/js/jquery.slicknav.js"></script>
-<script src="../ALMshop-main/js/owl.carousel.min.js"></script>
-<script src="../ALMshop-main/js/jquery.nicescroll.min.js"></script>
-<script src="../ALMshop-main/js/main.js"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/mixitup.min.js"></script>
+<script src="../js/jquery.countdown.min.js"></script>
+<script src="../js/jquery.slicknav.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.nicescroll.min.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
