@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camisola principal do Barcelona 24/25</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script>
+       
+
+        function toggleCustomization(show) {
+            document.getElementById('customization-fields').style.display = show ? 'block' : 'none';
+            updatePrice(show);
+        }
+
+        function updatePrice(addCustomization, addBadge) {
+            const basePrice = 25.99;
+            const customizationCost = addCustomization ? 5.00 : 0.00;
+            const badgeCost = addBadge ? 3.00 : 0.00;
+            const totalPrice = basePrice + customizationCost + badgeCost;
+            document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '€';
+        }
+
+        function toggleBadge(show) {
+    document.getElementById('customization-badge').style.display = show ? 'block' : 'none';
+    if (!show) {
+        document.getElementById('badge-text').value = ''; // Limpa o campo se o distintivo não estiver visível
+    }
+}
+
+
+
+function toggleBadge(show) {
+    document.getElementById('customization-badge').style.display = show ? 'block' : 'none';
+    updatePrice(document.getElementById('Personalização-yes').checked, show);
+    if (!show) {
+        document.getElementById('badge-text').value = ''; // Limpa o campo se o distintivo não estiver visível
+    }
+}
+
+function updatePrice(addCustomization, addBadge) {
+    const basePrice = 25.99;
+    const customizationCost = addCustomization ? 5.00 : 0.00;
+    const badgeCost = addBadge ? 3.00 : 0.00;
+    const totalPrice = basePrice + customizationCost + badgeCost;
+    document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '€';
+}
+
+
+
+    </script>
+</head>
+
+<body>
+    <!-- Page Preloader -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+       
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+       
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="Premierleague.html">Premier League</a></li>
+                            <li><a href="Bundesliga.html">Bundesliga</a></li>
+                            <li><a href="Ligabetclic.html">Liga Betclic</a></li>
+                            <li class="active"><a href="Laliga.html">Laliga</a></li>
+                            <li><a href="Seleções.html">Seleções</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-2">
+                    <nav class="header__menu">
+                        <ul>
+                        <li><a href="Retro.html">RETRO</a></li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <span>Camisola principal do Barcelona 24/25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__left product__thumb nice-scroll">
+                            <a class="pt active" href="#product-1">
+                                <img src="img/shop/barca2425.png" alt="">
+                            </a>
+                            <a class="pt" href="#product-2">
+                                <img src="img/shop/barca2425-3.png" alt="">
+                            </a>
+                            <a class="pt" href="#product-3">
+                                <img src="img/shop/barca2425-2.png" alt="">
+                            </a>
+                            
+                        </div>
+                        <div class="product__details__slider__content">
+                            <div class="product__details__pic__slider owl-carousel">
+                                <img data-hash="product-1" class="product__big__img" src="img/shop/barca2425.png"
+                                    alt="">
+                                <img data-hash="product-2" class="product__big__img" src="img/shop/barca2425-3.png"
+                                    alt="">
+                                
+                                <img data-hash="product-2" class="product__big__img" src="img/shop/barca2425-2.png"
+                                    alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product__details__text">
+                        <h3>Camisola principal do Barcelona 24/25<span>Marca: Barcelona</span></h3>
+                        <div class="product__details__price"><a id="product-price">25.99€</a></div>
+                        <p>Camisola principal do Barcelona para a temporada 2024/2025</p>
+                
+                        <!-- Campo personalização -->
+                
+                        <div class="product__details__option">
+                            <!-- Personalização Section -->
+                            <div class="product__details__option__size">
+
+                                <div class="product__details__option__size">
+                                    <span>Tamanho:</span>
+                                    <select id="product-size" onchange="updatePrice(document.getElementById('Personalização-yes').checked, document.getElementById('badge-yes').checked)">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="XXL">XXL</option>
+                                    </select>
+                                </div>
+                                <br>
+                                
+                                <span>Personalização (+5€):</span>
+                                <fieldset>
+                                    <div class="radio-inline">
+                                        <input type="radio" id="Personalização-yes" name="Personalização" value="yes"
+                                            onclick="toggleCustomization(true)">
+                                        <label for="Personalização-yes">Sim</label>
+                                    </div>
+                                    <div class="radio-inline">
+                                        <input type="radio" id="Personalização-no" name="Personalização" value="no"
+                                            onclick="toggleCustomization(false)">
+                                        <label for="Personalização-no">Não</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                
+                        <div id="customization-fields" style="display: none;">
+                            <div class="product__details__option__size">
+                                <span>Nome:</span>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="product__details__option__size">
+                                <span>Número:</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                            <!-- Campo do Distintivo -->
+                            <div class="product__details__option">
+                                <div class="product__details__option__size">
+                                    <span>Distintivo (+3€):</span>
+                                    <fieldset>
+                                        <div class="radio-inline">
+                                            <input type="radio" id="badge-yes" name="badge" value="yes" onclick="toggleBadge(true)">
+                                            <label for="badge-yes">Sim</label>
+                                        </div>
+                                        <div class="radio-inline">
+                                            <input type="radio" id="badge-no" name="badge" value="no" onclick="toggleBadge(false)">
+                                            <label for="badge-no">Não</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                
+                            <div id="customization-badge" style="display: none;">
+                                <div class="product__details__option__size">
+                                    <span>Nome do badge:</span>
+                                    <input type="text" id="badge-text" class="form-control" onchange="updatePrice(document.getElementById('Personalização-yes').checked, true)">
+                                </div>
+                                <!-- Mais campos conforme necessário para personalização do distintivo -->
+                            </div>
+                        </div>
+                <br>
+                        <!-- fim da seleção de sim e não -->
+                
+                        <div class="product__details__button">
+                            <div class="quantity">
+                                <span>Quantidade:</span>
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </div>
+                            <a href="" class="cart-btn">Tira print as tuas escolhas e manda para o nosso insta !</a>     
+                        </div>
+                        <a href="https://www.instagram.com/almshop.24/" class="cart-btn">INSTAGRAM  <i class="fa fa-instagram"></i></a>
+                        <div class="product__details__last__option">
+                            <br>
+                            <hr>
+                            <h5><span>Garantia de Envio Seguro 100%</span></h5>
+                            <br>
+                            <p>(Portes Gratuitos)<p>
+                            <img src="img/shop-details/details-payment.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                            <script>
+                               
+                                function toggleCustomization(show) {
+                                    document.getElementById('customization-fields').style.display = show ? 'block' : 'none';
+                                    if (!show) {
+                                        updatePrice(false, document.getElementById('badge-yes').checked);
+                                    } else {
+                                        updatePrice(true, document.getElementById('badge-yes').checked);
+                                    }
+                                }
+                            
+                                function toggleBadge(show) {
+                                    document.getElementById('customization-badge').style.display = show ? 'block' : 'none';
+                                    updatePrice(document.getElementById('Personalização-yes').checked, show);
+                                    if (!show) {
+                                        document.getElementById('badge-text').value = ''; // Limpa o campo se o distintivo não estiver visível
+                                    }
+                                }
+                            
+                                function updatePrice(addCustomization, addBadge) {
+                                    const basePrice = 25.99;
+                                    let customizationCost = addCustomization ? 5.00 : 0.00;
+                                    const badgeCost = addBadge ? 3.00 : 0.00;
+                            
+                                    if (document.getElementById('Personalização-yes').checked) {
+                                        customizationCost = 5.00;
+                                    } else {
+                                        customizationCost = 0.00;
+                                    }
+                            
+                                    const totalPrice = basePrice + customizationCost + badgeCost;
+                                    document.getElementById('product-price').textContent = totalPrice.toFixed(2) + '€';
+                                }
+                            </script>
+                            
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Related Product Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    <center> <p>Mais do que camisolas , são emoções.</p></center>
+                       
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer__copyright__text">
+                        <p>Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            All rights reserved | by <a target="_blank">ALM SHOP</a>
+                        </p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
